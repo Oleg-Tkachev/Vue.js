@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="task">
+        <pre>     <button @click="sortInAscendingOrder">Цена min</button> <button @click="sortInDescendingOrder">Цена max</button></pre>
+        <ol>
+            <li v-for="item in products" :key="item.id">
+                <pre>{{ item.name }} : {{ item.price }}</pre>
+            </li>
+        </ol>
+    </div>
+
+</body>
+
+</html>
